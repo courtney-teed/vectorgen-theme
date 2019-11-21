@@ -1,0 +1,949 @@
+/*
+Theme Name: VectorGen
+Theme URI:
+Author: Courtney Teed, Kristen Harlin, Michelle Stallings
+Description: Custom theme for VectorGen
+Version: 0.1
+License: Open
+Text Domain: vectorgen-theme
+*/
+
+@import url("stylesheets/normalize.css");
+@import url("stylesheets/skeleton.css");
+/*
+Colors
+dark blue - #001c40
+navy blue (logo) = #1f497d
+light blue - #4c9cff
+gold - #ffc500
+white - #f2f2f2
+*/
+
+body {
+	background-color: #ffffff;
+	color: #001c40;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+h2 {
+	color: #001c40;
+}
+.container {
+	width: auto;
+	max-width: 3200px;
+	margin: 0 3%;
+}
+.container.individual-blog-post {
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+ul li {
+	list-style-type: none;
+	display: inline;
+}
+img {
+	max-width: 100%;
+	height: 100%;
+}
+.nav-menu {
+	display: none;
+}
+header {
+	background: #1f497d;
+}
+h1#n2-ss-2item1 {
+	margin-top: -24px;
+	margin-bottom: 30px;
+}
+header a, header a:visited, header a:active, footer a, footer a:visited, footer a:active {
+	color: #f2f2f2;
+}
+header a:hover, footer a:hover {
+	color: #ffc500;
+	transition: 0.5s;
+}
+header img {
+	max-width: 80px;
+	margin-top: 0;
+	margin-left: 35%;
+}
+header.menu {
+	display: none;
+}
+/* search text */
+
+header h3.widget-title {
+	display: none;
+}
+header pre, header blockquote, header dl, header figure, header table, header p, header ul, header ol, header form {
+	margin-bottom: 0;
+}
+.two.columns {
+	display: none;
+}
+.container:after, .row:after {
+	display: flex;
+}
+.gray-background {
+	background-color: #f2f2f2;
+}
+footer {
+	background: #1f497d;
+	width: auto;
+}
+#footer p {
+	margin: 0 40px 20px 0;
+}
+@media (min-width: 550px) {
+	#footer p {
+		margin-left: 36px;
+	}
+}
+@media (min-width: 1200px) {
+	#footer p {
+		margin: 0 4% 20px 0;
+	}
+}
+.text-block-callout-widget {
+	padding: 10% 10%;
+}
+/* home widgets toward bottom */
+
+#bottom-home-img-block1, #bottom-home-img-block2 {
+	width: 88%;
+	height: 270px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 26px;
+	flex-direction: column;
+	margin-bottom: 160px;
+	margin-left: -4%;
+}
+/*** biography page styles ****/
+
+.row.biography-main a:nth-child(1) {
+	font-size: 3.4rem;
+	font-weight: 300;
+}
+.row.biography-main {
+	clear: both;
+	padding: 5%;
+	min-height: 170px;
+	/* display: flex; */
+	flex-direction: column;
+	/* background-color: aliceblue; */
+}
+.row.biography-main:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	border-radius: 50%;
+	max-width: 132px;
+}
+.biography-single {
+	margin-top: 10%;
+}
+@media (max-width: 449px) {
+	.yikes-mailchimp-form-description.yikes-mailchimp-form-description-2 {
+		padding-top: 40px;
+	}
+}
+/* contact page - form and newsletter signup */
+
+input#yikes-easy-mc-form-1-EMAIL {
+	width: 392px !important;
+}
+@media (min-width: 800px) {
+	input, textarea, #yikes-easy-mc-form-1-EMAIL, .yikes-easy-mc-form .yikes-easy-mc-submit-button {
+		width: 392px;
+	}
+}
+input::placeholder, textarea::placeholder, .yikes-easy-mc-email::placeholder {
+	color: #D1D1D1;
+}
+.yikes-easy-mc-email::placeholder {
+	font-weight: 300;
+	letter-spacing: 0.05em;
+}
+#yikes-easy-mc-form-1-EMAIL {
+	border: 1px solid #D1D1D1 !important;
+}
+/* ---- mobile styles ----- */
+
+.menu-header-menu-container {
+	display: none;
+}
+.screen-reader-text {
+	color: #f2f2f2;
+	font-weight: 300;
+}
+#searchform {
+	display: none;
+}
+h3 {
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+h3.mission {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-around;
+	width: 70%;
+	max-width: 400px;
+}
+h3.mission span.top-border-bottom {
+	padding-bottom: 10px;
+	border-bottom: 3px solid #001c40;
+}
+h3.mission span.bottom {
+	font-size: 4rem;
+	line-height: 1.1em;
+	padding-top: 10px;
+}
+.button {
+	color: #001c40;
+	border: 2px solid #001c40;
+	font-size: 1.6rem;
+}
+.section-header h3 {
+	padding: 35px 0 35px 0;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.section-header h3 span {
+	padding-bottom: 10px;
+	border-bottom: 3px solid #001c40;
+}
+.dark-gray-background {
+	width: 80%;
+	background-color: #f2f2f2;
+	margin-bottom: 100px;
+}
+.circle-image {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	margin-top: -50px;
+}
+.container:after, .row:after, .u-cf {
+	margin: auto;
+}
+.one-third.column.dark-gray-background {
+	text-align: center;
+	margin-left: 10%;
+}
+.paragraph-text {
+	padding: 0 25px 0 25px;
+}
+.additional-sections {
+	text-align: center;
+	margin-bottom: 40px;
+	display: flex;
+	clear: both;
+}
+.additional-sections h2 {
+	text-align: center;
+	color: #ffffff;
+}
+.additional-sections .dark-gray-background {
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+.font-weight-heavy {
+	font-weight: 500;
+	font-size: 2.6rem;
+}
+.interior-page .featured-image {
+	width: 100%;
+	object-fit: contain;
+}
+.interior-page .featured-image img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.interior-page input[type="submit"] {
+	color: inherit;
+}
+input[type="submit"]:hover {
+	color: #ffc500;
+}
+input.wpcf7-form-control.wpcf7-submit:hover {
+	color: #ffc500 !important;
+}
+.interior-page, .blog-page {
+	padding: 40px 0;
+}
+.page-subtitle, .post-subtitle {
+	font-style: italic;
+	font-size: 2rem;
+}
+/* blog page */
+
+.latest-news {
+	margin-top: 40px;
+	margin-left: 7%;
+}
+div.blog-page-details {
+	position: absolute;
+	z-index: 8;
+	margin-top: -200px;
+	padding: 30px;
+	max-width: 90%;
+	/*width: 100%;*/
+}
+.blog-page-details h3 {
+	font-size: 1.85rem;
+	letter-spacing: 0.05em;
+}
+.blog-page-details a {
+	color: #ffffff;
+}
+.blog-featured-image {
+	filter: brightness(50%);
+}
+ul.post-categories {
+	display: none;
+}
+.blog-post-title {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.post-date {
+	margin-bottom: 5px;
+	padding-bottom: 0;
+}
+.blog-page p {
+	font-size: 1.3rem;
+}
+/* fixes hiv image errors */
+
+#responsive-img img {
+	max-width: 55%;
+	height: 100%;
+}
+@media (min-width: 550px) {
+	.blog-page .nine.columns.u-pull-right {
+		margin-bottom: 45px;
+	}
+	div.blog-page-details {
+		max-width: 60%;
+		margin-top: -225px;
+	}
+	.blog-page {
+		margin-top: -20px;
+	}
+	.blog-featured-image {
+		margin-top: -90px;
+	}
+	img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+		border-radius: 50%;
+		max-width: 132px;
+		display: block;
+	}
+	#bottom-home-img-block1, #bottom-home-img-block2 {
+		width: 100%;
+		margin-left: -4%
+	}
+	#responsive-img img {
+		max-width: 70%;
+	}
+}
+@media (min-width: 750px) {
+	.blog-page {
+		margin-top: -20px;
+	}
+	.blog-featured-image {
+		max-width: 500px;
+	}
+	ul.post-categories {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 1.2rem;
+		margin-top: -20px;
+		margin-bottom: 0;
+	}
+	.post-date a {
+		font-size: 1.2rem;
+	}
+	.post-date {
+		margin-top: -20px;
+		margin-bottom: 20px;
+		padding-bottom: 0;
+	}
+	div.blog-page-details {
+		max-width: 400px;
+		margin-top: -240px;
+	}
+	.blog-page-details h3 {
+		font-size: 2.5rem;
+	}
+	.blog-page p {
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+	}
+	#bottom-home-img-block1, #bottom-home-img-block2 {
+		height: 450px;
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+	#responsive-img img {
+		max-width: 90%;
+	}
+}
+@media (min-width: 900px) {
+	div.blog-page-details {
+		margin-top: -270px;
+	}
+	.blog-featured-image {
+		max-width: 600px;
+	}
+}
+@media (min-width: 1000px) {
+	.blog-page {
+		margin-left: 15%;
+	}
+}
+/* individual blog posts */
+
+.individual-blog-post .feature-img {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	max-width: 800px;
+}
+.individual-blog-post .three.columns {
+	margin-top: 40px;
+}
+.individual-blog-post .nine.columns {
+	max-width: 800px;
+	margin-bottom: 60px;
+}
+.previous-post a, .next-post a {
+	color: #001c40;
+	font-weight: 500;
+}
+.previous-post a:hover, .next-post a:hover {
+	transition: all 0.3s;
+	color: #ffc500;
+}
+@media (min-width: 450px) {
+	.other-posts {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+/* search.php */
+
+.search-page {
+	margin: 40px 0 60px 30px;
+	max-width: 800px;
+}
+.search-results-for {
+	font-weight: 600;
+	margin-bottom: 60px;
+	text-decoration: underline;
+}
+.search-page h2 {
+	font-size: 2.4rem;
+	font-weight: 400;
+}
+.search-page h2 a {
+	color: #1f497d;
+}
+.search-page h2 a:hover {
+	transition: all 0.3s;
+	color: #ffc500;
+}
+.search-page .read-more a {
+	color: #001c40;
+	font-weight: 500;
+}
+.search-page .read-more a:hover {
+	transition: all 0.3s;
+	color: #ffc500;
+}
+.search-page input#searchsubmit {
+	color: #001c40;
+}
+.search-page input#searchsubmit:hover {
+	color: #ffc500;
+}
+@media (min-width: 1200px) {
+	.search-page {
+		margin: 40px 0 60px 135px;
+	}
+	.index-feature {
+		max-width: 400px;
+	}
+}
+/* archive.php */
+
+.archive-page {
+	margin: 40px 0 60px 30px;
+	max-width: 800px;
+}
+.archive-page h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-bottom: 60px;
+	text-decoration: underline;
+}
+.index-feature {
+	margin-bottom: 20px;
+}
+.archive-page h2 a {
+	color: #1f497d;
+}
+.archive-page h2 a:hover {
+	transition: all 0.3s;
+	color: #ffc500;
+}
+.archive-page .read-more a {
+	color: #001c40;
+	font-weight: 500;
+}
+.archive-page .read-more a:hover {
+	transition: all 0.3s;
+	color: #ffc500;
+}
+@media (min-width: 1200px) {
+	.archive-page {
+		margin: 40px 0 60px 135px;
+	}
+}
+footer {
+	color: #f2f2f2;
+	font-weight: 500;
+}
+#footer {
+	padding-top: 40px;
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+ul#menu-footer-menu {
+	width: 170px;
+	height: 118px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+ul#menu-footer-menu li {
+	margin-right: 40px;
+}
+@media (max-width: 550px) {
+	div#gtranslate_wrapper {
+		left: 7% !important;
+	}
+}
+/* newsletter quick signup in footer */
+
+div#yikes-mailchimp-container-2 {
+	margin-left: 30%;
+}
+.EMAIL-label {
+	display: none;
+}
+section.yikes-mailchimp-form-description.yikes-mailchimp-form-description-2 {
+	font-size: 1.6rem;
+	width: 125px;
+}
+section.yikes-mailchimp-form-description.yikes-mailchimp-form-description-2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+@media (min-width: 550px) {
+  section.yikes-mailchimp-form-description.yikes-mailchimp-form-description-2 {
+    margin-top: 0;
+  }
+}
+
+.yikes-easy-mc-form input[type=email], .yikes-easy-mc-form input[type=number], .yikes-easy-mc-form input[type=password], .yikes-easy-mc-form input[type=text], .yikes-easy-mc-form input[type=url], .yikes-easy-mc-form select, .yikes-easy-mc-form textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 70% !important;
+	min-width: 190px;
+	height: 50px !important;
+}
+.yikes-easy-mc-form input[type=email], .yikes-easy-mc-form input[type=number], .yikes-easy-mc-form input[type=password], .yikes-easy-mc-form input[type=text], .yikes-easy-mc-form input[type=url], .yikes-easy-mc-form select, .yikes-easy-mc-form textarea {
+	border: 2px solid #ffc500 !important;
+	background: transparent !important;
+}
+input#yikes-easy-mc-form-2-EMAIL::placeholder {
+	color: #ffc500;
+	font-weight: 600;
+	font-size: 1.5rem;
+	letter-spacing: 0.05em;
+	padding-left: 5px;
+}
+/* /newsletter quick signup in footer */
+
+/* social media icons */
+
+.icon-set-lsi_widget-3 a, .icon-set-lsi_widget-3 a:visited, .icon-set-lsi_widget-3 a:focus {
+	border-radius: 20px;
+	background: #ffffff !important;
+	color: #1f497d !important;
+	font-size: 15px !important;
+	margin: 0 10px 0 0;
+}
+/* /social media icons */
+
+/* 404 page */
+
+.not-found {
+	padding: 25px 25px 200px 20px;
+	margin-bottom: 400px;
+}
+.not-found input#searchsubmit {
+	color: #001c40;
+}
+.not-found #s {
+	width: 140px;
+	height: 36px;
+}
+label.screen-reader-text {
+	display: none;
+}
+/* /404 page */
+
+.one-third.column.dark-gray-background {
+	margin: 50px 43px;
+}
+.row.news {
+	margin: auto;
+	text-align: center;
+}
+/* Larger than mobile */
+
+@media (min-width: 400px) {
+	h2 {
+		font-size: 3rem;
+	}
+}
+/* Larger than phablet (also point when grid becomes active) */
+
+@media (min-width: 550px) {
+	h2 {
+		font-size: 4rem;
+	}
+	.section-header h3 span {
+		font-size: 3rem;
+	}
+	.one-third.column.dark-gray-background {
+		margin-left: 0;
+	}
+	.additional-sections .dark-gray-background {
+		margin: auto;
+	}
+	footer {
+		font-size: 1.2rem;
+		clear: both;
+	}
+	.lsi-social-icons.icon-set-lsi_widget-3 {
+		width: 220px;
+	}
+	.footer-menu {
+		/*display: flex;*/
+		/*width: 100%;*/
+	}
+	.menu ul li {
+		padding: 0 20px 0 0;
+	}
+}
+/* ---- tablet styles ----- */
+
+@media (min-width: 750px) {
+	.n2-ss-button-container:hover {
+		border: 2px solid #f2f2f2;
+		background-color: #ffc500;
+		color: #f2f2f2;
+		transition: all .4s ease-out;
+	}
+	h2 {
+		font-size: 4.5rem;
+	}
+	div#gtranslate_wrapper {
+		right: 7% !important;
+	}
+}
+@media (max-width: 1199px) {
+	ul#menu-footer-menu {
+		display: none !important;
+	}
+	div#yikes-mailchimp-container-2 {
+		margin-left: -28px;
+		margin-bottom: 10px;
+	}
+	.yikes-easy-mc-form input[type=email], .yikes-easy-mc-form input[type=number], .yikes-easy-mc-form input[type=password], .yikes-easy-mc-form input[type=text], .yikes-easy-mc-form input[type=url], .yikes-easy-mc-form select, .yikes-easy-mc-form textarea {
+		width: 50% !important;
+		min-width: 160px;
+	}
+	ul.lsi-social-icons.icon-set-lsi_widget-3 {
+		text-align: left !important;
+		margin-bottom: 20px !important;
+	}
+}
+/* ---- desktop styles ----- */
+
+@media (min-width: 1000px) {
+	h2 {
+		font-size: 5rem;
+	}
+	#responsive-img img {
+		max-width: 100%;
+	}
+}
+@media (min-width: 550px) and (max-width: 1200px) {
+	header img {
+		margin-top: 0;
+		margin-left: 200%;
+	}
+}
+/* Larger than Desktop HD */
+
+@media (min-width: 1200px) {
+	header .three.columns {
+		width: 16%;
+	}
+	header .seven.columns {
+		margin-left: 0;
+		width: 75%;
+	}
+	header .two.columns {
+		display: flex;
+		justify-content: flex-end;
+		width: 5%;
+		margin-left: 0;
+	}
+	header .two.columns div {
+		padding: 2px 0px 5px 0px;
+	}
+	#searchform {
+		display: block;
+	}
+	#s {
+		width: 100px;
+		height: 25px;
+	}
+	#searchform div {
+		display: flex;
+		margin-top: 0;
+	}
+	input#searchsubmit {
+		width: 100px;
+		height: 38px;
+		margin-top: -6px;
+	}
+	input[type="submit"] {
+		color: #f2f2f2;
+		font-size: 1rem;
+	}
+	.contact-page-forms {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.direct-contact-form {
+		margin-right: 100px;
+	}
+	.newsletter-signup-form {
+		margin-top: -60px;
+	}
+	.menu-header-menu-container {
+		display: flex;
+		flex-direction: row;
+		padding-top: 30px;
+		margin-left: 30px;
+	}
+}
+@media (min-width: 1200px) {
+	.menu-header-menu-container {
+		justify-content: center;
+	}
+	ul#menu-header-menu a {
+		padding: 8px 15px;
+		font-size: 1.5rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+	ul.sub-menu {
+		position: absolute;
+		background-color: #001c40;
+		z-index: 999999999;
+		margin-top: 5px;
+	}
+	ul.sub-menu li {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+	.menu-item-36 ul.sub-menu {
+		margin-left: 78px;
+	}
+	.menu-item-31 ul.sub-menu {
+		margin-left: 502px;
+	}
+	li#menu-item-166, li#menu-item-159, li#menu-item-160, li#menu-item-161 {
+		padding-bottom: 0;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	/* Header Search styles */
+	.search {
+		display: flex;
+		justify-content: space-around;
+		width: 148px;
+		align-content: center;
+		align-items: center;
+		margin-top: 26px;
+	}
+	.widget-header.widget-right {
+		display: flex;
+		justify-content: space-around;
+		width: 148px;
+		align-content: center;
+		align-items: center;
+		margin-top: 26px;
+	}
+	label.screen-reader-text {
+		font-size: 1rem;
+		padding-right: 12px;
+	}
+	input#s {
+		margin-right: 10px;
+	}
+	#menu-footer-menu .menu {
+		width: 340px;
+		display: flex;
+	}
+	div#gtranslate_wrapper {
+		right: 6.5% !important;
+	}
+}
+/* fixed homepage one-third column widgets */
+
+.row:after, .u-cf {
+	content: "";
+	display: flex;
+	clear: none;
+	margin: auto !important;
+}
+.right-featured-page-widget, .middle-featured-page-widget, .left-featured-page-widget {
+	margin-bottom: 50px;
+}
+/* BOTTOM Homepage feature widgets*/
+
+.bottom-home-text-widget {
+	margin-left: 0;
+}
+.additional-sections img {
+	height: 100%;
+	min-width: 372px;
+	margin-left: -74px;
+	object-fit: contain;
+}
+.additional-sections .dark-gray-background {
+	background: transparent;
+	margin-bottom: 60px;
+}
+.learn-more-home-block {
+	padding: 25px;
+	/*  text-align: left;
+  position: absolute;*/
+	z-index: 9999;
+	/*  margin-top: -170px;
+  margin-left: -12%;*/
+}
+.learn-more-home-block p {
+	background-color: #f2f2f2;
+	width: 160px;
+	padding: 10% 15%;
+}
+@media (min-width: 550px) {
+	ul.lsi-social-icons.icon-set-lsi_widget-3 {
+		margin-left: 30px !important;
+	}
+	.learn-more-home-block p {
+		width: 300px;
+		padding: 10% 15%;
+	}
+	.learn-more-home-block {
+		margin-right: 2%;
+	}
+	.additional-sections h2 {
+		font-size: 3.4rem;
+		margin-left: 10%;
+	}
+	#footer {
+		padding-top: 40px;
+	}
+}
+.h3-newsletter {
+	margin-top: 60px;
+}
+.yikes-easy-mc-form .yikes-easy-mc-submit-button {
+	height: 38px !important;
+	width: 98px !important;
+	padding: 0 !important;
+	color: #001c40 !important;
+}
+.yikes-easy-mc-form .yikes-easy-mc-submit-button:hover {
+	color: #ffc500 !important;
+}
+input#yikes-easy-mc-form-1-EMAIL {
+	width: 320px !important;
+}
+input.wpcf7-form-control.wpcf7-submit {
+	height: 38px !important;
+	width: 98px !important;
+	padding: 0 !important;
+	color: #001c40 !important;
+}
+.one-third.column.dark-gray-background {
+	clear: none;
+	width: 80%;
+	margin: 40px 10%;
+}
+@media (min-width: 1000px) {
+	.additional-sections h2 {
+		margin-left: 20%;
+	}
+	.row:after, .u-cf {
+		content: "";
+		display: flex;
+		clear: none !important;
+	}
+	.one-third.column.dark-gray-background {
+		width: 28% !important;
+	}
+	.featured-stories {
+		margin-left: 2%;
+	}
+	.one-third.column.dark-gray-background {
+		clear: none;
+		width: 80%;
+		margin: 40px 2%;
+	}
+}
+@media (min-width: 1200px) {
+	.yikes-easy-mc-form .yikes-easy-mc-submit-button-image {
+		padding-left: 140px !important;
+	}
+	input#yikes-easy-mc-form-1-EMAIL {
+		width: 392px !important;
+	}
+}
+@media (min-width: 1400px) {
+	div#gtranslate_wrapper {
+		right: 5.5% !important;
+	}
+}
